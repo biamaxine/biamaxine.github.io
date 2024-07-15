@@ -1,0 +1,97 @@
+@use 'sass:list';
+
+$map: (
+  'blue': (
+    100: hsl(200, 50%, 90%), 300: hsl(200, 50%, 70%),
+    600: hsl(200, 50%, 40%), 900: hsl(200, 50%, 10%),
+    'contrast': (
+      100: hsl(200, 50%, 10%), 300: hsl(200, 50%, 10%),
+      600: hsl(200, 50%, 90%), 900: hsl(200, 50%, 90%),
+    ),
+  ),
+  'pink': (
+    100: hsl(330, 50%, 90%), 300: hsl(330, 50%, 70%),
+    600: hsl(330, 50%, 40%), 900: hsl(330, 50%, 10%),
+    'contrast': (
+      100: hsl(330, 50%, 10%), 300: hsl(330, 50%, 10%),
+      600: hsl(330, 50%, 90%), 900: hsl(330, 50%, 90%),
+    ),
+  ),
+);
+
+@function get($palette, $color) {
+  @if map-has-key($map, $palette) {
+    $palette-map: map-get($map, $palette);
+
+    @if map-has-key($palette-map, $color) {
+      @return map-get($palette-map, $color);
+    }
+    @return null;
+  }
+  @return null;
+}
+
+@function contrast($palette, $color) {
+  @if map-has-key($map, $palette) {
+    $contrast-map: map-get(map-get($map, $palette), 'contrast');
+
+    @if map-has-key($contrast-map, $color) {
+      @return map-get($contrast-map, $color);
+    }
+    @return null;
+  }
+  @return null;
+}
+
+$palette: (
+  'blue': (
+    'light': (
+      'primary': ('blue', 100), 'secondary': ('blue', 900),
+      'accent': ('pink', 300), 'accent_hover': ('pink', 600),
+    ),
+    'dark': (
+      'primary': ('blue', 900), 'secondary': ('blue', 100),
+      'accent': ('pink', 600), 'accent_hover': ('pink', 300),
+    ),
+  ),
+  'pink': (
+    'light': (
+      'primary': ('pink', 100), 'secondary': ('pink', 900),
+      'accent': ('blue', 300), 'accent_hover': ('blue', 600),
+    ),
+    'dark': (
+      'primary': ('pink', 900), 'secondary': ('pink', 100),
+      'accent': ('blue', 600), 'accent_hover': ('blue', 300),
+    ),
+  ),
+);
+
+@each $theme-name, $theme in $palette {
+  .#{$theme-name} {
+
+    @each $mode-name, $mode in $theme {
+      &_#{$mode-name} {
+
+        @each $color-name, $color in $mode {
+          &_#{$color-name} {
+            $style-map: (
+              'bg': background-color, 'txt': color,
+              'border': border-color, 'fill': fill,
+              'stroke': stroke,
+            );
+
+            @each $style-name, $style in $style-map {
+              &_#{$style-name} {
+                #{$style}: get(list.nth($color, 1), list.nth($color, 2));
+              }
+
+              &_contrast_#{$style-name} {
+                #{$style}: contrast(list.nth($color, 1), list.nth($color, 2));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  app-menu-option {
+    width: calc(50% - 2.5rem);
+
+    &.menu-option-fix {
+      width: 2.5rem;
+    }
+  }
+}

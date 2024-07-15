@@ -1,0 +1,19 @@
+@use '../../../styles/palette.scss';
+
+:host {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateY(-2.5rem);
+}
+
+// palette settings
+:host {
+  &.blue_light { @extend .blue_light_primary_bg, .blue_light_primary_contrast_txt; }
+  &.blue_dark { @extend .blue_dark_primary_bg, .blue_dark_primary_contrast_txt; }
+  &.pink_light { @extend .pink_light_primary_bg, .pink_light_primary_contrast_txt; }
+  &.pink_dark { @extend .pink_dark_primary_bg, .pink_dark_primary_contrast_txt; }
+}

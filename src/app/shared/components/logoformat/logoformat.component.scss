@@ -1,0 +1,64 @@
+@use '../../../../styles/palette.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1.logoformat-title.display {
+    line-height: 100%;
+
+    &.logoformat-title-1 {
+      padding-right: 4.5rem;
+    }
+    &.logoformat-title-2 {
+      padding-left: 4.5rem;
+    }
+  }
+
+  span.logoformat-hr {
+    height: 2px;
+    width: 100%;
+
+    display: flex;
+
+    padding: 0 1rem;
+    border-radius: 2px;
+  }
+}
+
+// palette settings
+:host {
+  &.blue_light {
+    h1.logoformat-title {
+      @extend .blue_light_primary_contrast_txt;
+    }
+    span.logoformat-hr {
+      @extend .blue_light_primary_contrast_bg;
+    }
+  }
+  &.blue_dark {
+    h1.logoformat-title {
+      @extend .blue_dark_primary_contrast_txt;
+    }
+    span.logoformat-hr {
+      @extend .blue_dark_primary_contrast_bg;
+    }
+  }
+  &.pink_light {
+    h1.logoformat-title {
+      @extend .pink_light_primary_contrast_txt;
+    }
+    span.logoformat-hr {
+      @extend .pink_light_primary_contrast_bg;
+    }
+  }
+  &.pink_dark {
+    h1.logoformat-title {
+      @extend .pink_dark_primary_contrast_txt;
+    }
+    span.logoformat-hr {
+      @extend .pink_dark_primary_contrast_bg;
+    }
+  }
+}

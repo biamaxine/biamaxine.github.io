@@ -1,0 +1,27 @@
+@use '../../../../styles/palette.scss';
+
+:host {
+  svg {
+    width: 100%;
+  }
+}
+
+// theme settings
+:host {
+  &.blue_light {
+    svg { @extend .blue_light_accent_fill; }
+    &:hover svg { @extend .blue_light_accent_hover_fill; }
+  }
+  &.blue_dark {
+    svg { @extend .blue_dark_accent_fill; }
+    &:hover svg { @extend .blue_dark_accent_hover_fill; }
+  }
+  &.pink_light {
+    svg { @extend .pink_light_accent_fill; }
+    &:hover svg { @extend .pink_light_accent_hover_fill; }
+  }
+  &.pink_dark {
+    svg { @extend .pink_dark_accent_fill; }
+    &:hover svg { @extend .pink_dark_accent_hover_fill; }
+  }
+}

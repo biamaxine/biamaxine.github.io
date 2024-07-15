@@ -1,8 +1,14 @@
 :host {
+  position: sticky;
+  top: calc(-50vh + 1.25rem - 1px);
+
+  height: 2.5rem;
   width: 100%;
 
   display: flex;
   justify-content: center;
+
+  transform: translateY(calc(50vh - 1.25rem));
 
   app-menu-option {
     width: calc(50% - 2.5rem);

@@ -1,3 +1,5 @@
+@use '../../../../../styles/palette.scss';
+
 :host {
   a.menu-option-link {
     width: 100%;
@@ -29,7 +31,8 @@
       transition: all .3s ease-in-out;
     }
 
-    &:hover p.menu-option-name {
+    &:hover p.menu-option-name,
+    &:focus p.menu-option-name {
       width: calc(100% - 2.5rem);
     }
   }
@@ -40,5 +43,61 @@
   &.--menu-option-reverse a.menu-option-link {
     flex-direction: row-reverse;
     p.menu-option-name { justify-content: flex-end; }
+  }
+}
+
+// theme settings
+:host {
+  &.blue_dark a.menu-option-link {
+    @extend .blue_dark_accent_bg,
+            .blue_dark_accent_contrast_txt;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      i.menu-option-ico,
+      p.menu-option-name {
+        @extend .blue_dark_accent_hover_bg,
+                .blue_dark_accent_hover_contrast_txt;
+      }
+    }
+  }
+  &.blue_light a.menu-option-link {
+    @extend .blue_light_accent_bg,
+            .blue_light_accent_contrast_txt;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      i.menu-option-ico,
+      p.menu-option-name {
+        @extend .blue_light_accent_hover_bg,
+                .blue_light_accent_hover_contrast_txt;
+      }
+    }
+  }
+  &.pink_dark a.menu-option-link {
+    @extend .pink_dark_accent_bg,
+            .pink_dark_accent_contrast_txt;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      i.menu-option-ico,
+      p.menu-option-name {
+        @extend .pink_dark_accent_hover_bg,
+                .pink_dark_accent_hover_contrast_txt;
+      }
+    }
+  }
+  &.pink_light a.menu-option-link {
+    @extend .pink_light_accent_bg,
+            .pink_light_accent_contrast_txt;
+
+    &:hover, &:focus, &:focus-visible {
+      outline: none;
+      i.menu-option-ico,
+      p.menu-option-name {
+        @extend .pink_light_accent_hover_bg,
+                .pink_light_accent_hover_contrast_txt;
+      }
+    }
   }
 }

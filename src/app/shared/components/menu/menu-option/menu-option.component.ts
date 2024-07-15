@@ -11,6 +11,7 @@ export class MenuOptionComponent implements OnInit {
   @Input({ required: true }) ico!: string;
   @Input() name?: string;
   @Input() reverse: boolean | '' = false;
+  @Input() href: string = '#';
 
   constructor(
     private readonly element: ElementRef,

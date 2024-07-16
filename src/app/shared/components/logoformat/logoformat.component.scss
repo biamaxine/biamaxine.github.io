@@ -3,18 +3,21 @@
 :host {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  transform: translateX(-.5rem);
 
   h1.logoformat-title.display {
     line-height: 100%;
 
     transition: color .3s ease-in-out;
 
+    $padding: 4.5rem;
     &.logoformat-title-1 {
-      padding-right: 4.5rem;
+      padding-right: $padding;
+      padding-left: 1rem
     }
     &.logoformat-title-2 {
-      padding-left: 4.5rem;
+      padding-left: calc($padding + 1rem);
     }
   }
 
@@ -24,7 +27,7 @@
 
     display: flex;
 
-    padding: 0 1rem;
+    padding-right: 1rem;
     border-radius: 2px;
 
     transition: background-color .3s ease-in-out;

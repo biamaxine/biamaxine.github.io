@@ -35,9 +35,24 @@
 
 // palette settings
 :host {
+  &.blue_light {
+    div.project-cards-container div.project-ghost {
+      @extend .blue_light_secondary_bg;
+    }
+  }
   &.blue_dark {
     div.project-cards-container div.project-ghost {
       @extend .blue_dark_secondary_bg;
+    }
+  }
+  &.pink_light {
+    div.project-cards-container div.project-ghost {
+      @extend .pink_light_secondary_bg;
+    }
+  }
+  &.pink_dark {
+    div.project-cards-container div.project-ghost {
+      @extend .pink_dark_secondary_bg;
     }
   }
 }

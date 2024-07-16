@@ -12,4 +12,5 @@ import { Typography } from '../../types/typography.type';
 export class LogoformatComponent {
   @Input() title: [string, string] = ['bianca', 'maxine'];
   @Input() typography: Typography = 'display';
+  @Input() padding: string = '4.5';
 }

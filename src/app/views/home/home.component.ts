@@ -1,8 +1,9 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
 
 import { AboutComponent } from '../../shared/components/about/about.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
+import { LogoformatComponent } from '../../shared/components/logoformat/logoformat.component';
 import { ThemeService } from '../../shared/services/theme/theme.service';
 import { PaletteTheme } from '../../shared/types/palette-theme.type';
 import { HomeProjectsComponent } from './home-projects/home-projects.component';
@@ -12,6 +13,7 @@ const COMPONENTS = [
   AboutComponent,
   HeaderComponent,
   IconComponent,
+  LogoformatComponent,
   HomeServicesComponent,
   HomeProjectsComponent,
 ];
@@ -19,11 +21,11 @@ const COMPONENTS = [
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [COMPONENTS],
+  imports: [COMPONENTS, LogoformatComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
   theme: PaletteTheme = 'blue_dark';
 
   constructor(
@@ -32,7 +34,7 @@ export class HomeComponent implements OnInit {
     private readonly renderer: Renderer2,
   ) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.themeService.getThemeObservable().subscribe(theme => {
       this.theme = theme;
 

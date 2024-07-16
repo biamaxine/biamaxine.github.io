@@ -5,6 +5,6 @@ export type TechnologiesIcons =
   'html5'   | 'css3'     | 'sass'       | 'figma'      ;
 
 export type SocialMediaIcons =
-'github'  | 'linkedin' | 'instagram'  | 'behance'    ;
+  'github' | 'linkedin' | 'instagram' | 'behance' | 'gmail';
 
 export type Icon = TechnologiesIcons | SocialMediaIcons;

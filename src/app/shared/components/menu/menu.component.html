@@ -1,7 +1,19 @@
-<app-menu-option ico="space_dashboard" name="projetos" reverse
-class="{{ theme }}" />
-<app-menu-option ico="home" class="menu-option-fix {{ theme }}" />
-<app-menu-option (click)="modeSwap()" [ico]="modeReturn()"
-class="menu-option-fix {{ theme }}" />
-<app-menu-option ico="work" name="serviços"
-class="{{ theme }}" />
+<app-menu-option (click)="scrollTo()"
+  ico="home" name="home" reverse
+  class="{{ theme }} {{ menu.left.status ? '' : 'menu-option-fix' }}" />
+
+<app-menu-option (click)="scrollTo('projects')"
+  (enter)="menu.left.mouseEnter()"
+  (leave)="menu.left.mouseLeave()"
+  ico="space_dashboard" name="projetos" reverse
+  class="{{ theme }} {{ menu.left.status ? 'menu-option-fix' : '' }}" />
+
+<app-menu-option (click)="scrollTo('services')"
+  (enter)="menu.right.mouseEnter()"
+  (leave)="menu.right.mouseLeave()"
+  ico="work" name="serviços"
+  class="{{ theme }} {{ menu.right.status ? 'menu-option-fix' : '' }}" />
+
+<app-menu-option (click)="modeSwap()"
+  [ico]="modeReturn()" [name]="modeReturn().replace('_', ' ')"
+  class="{{ theme }} {{ menu.right.status ? '' : 'menu-option-fix' }}" />

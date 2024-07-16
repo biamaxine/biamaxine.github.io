@@ -25,17 +25,20 @@
     }
   }
 
+  $height: 15rem;
   footer {
     position: absolute;
-    bottom: -10rem;
+    bottom: -$height;
 
-    height: 10rem;
+    height: $height;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+
+    transition: all .3s ease-in-out;
 
     div.social-media {
       display: flex;

@@ -1,4 +1,4 @@
-<app-header [theme]="theme" />
+<app-header [theme]="theme"/>
 
 <app-about [theme]="theme">
   <article class="about-left">
@@ -12,16 +12,18 @@
   </article>
 </app-about>
 
-<app-home-services />
+<app-home-projects [theme]="theme" class="{{ theme }}" id="projects"/>
 
-<app-home-projects [theme]="theme" class="{{ theme }}" />
+<app-home-services id="services"/>
 
 <footer>
+
   <div class="social-media">
     <app-icon ico="github" class="{{ theme }}" />
     <app-icon ico="linkedin" class="{{ theme }}" />
     <app-icon ico="behance" class="{{ theme }}" />
     <app-icon ico="instagram" class="{{ theme }}" />
+    <app-icon ico="gmail" class="{{ theme }}" />
   </div>
 
   <p class="hint"> © Developed by Bianca Maxine. </p>

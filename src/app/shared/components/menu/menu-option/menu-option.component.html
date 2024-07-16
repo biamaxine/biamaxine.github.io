@@ -1,4 +1,10 @@
 <a name="{{ name }}" class="menu-option-link">
-  <i class="mat-ico menu-option-ico"> {{ ico }} </i>
+  <i
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  class="mat-ico menu-option-ico">
+    {{ ico }}
+  </i>
+
   @if (name) { <p class="menu-option-name button"> {{ name.toUpperCase() }} </p> }
 </a>

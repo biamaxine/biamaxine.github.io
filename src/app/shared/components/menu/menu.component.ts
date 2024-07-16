@@ -3,6 +3,8 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { MenuOptionComponent } from './menu-option/menu-option.component';
 import { ThemeService } from '../../services/theme/theme.service';
 import { PaletteTheme } from '../../types/palette-theme.type';
+import { ScrollService } from '../../services/scroll/scroll.service';
+import { Router } from '@angular/router';
 
 const COMPONENTS = [
   MenuOptionComponent,
@@ -20,9 +22,24 @@ export class MenuComponent implements OnInit {
 
   constructor(
     private readonly themeService: ThemeService,
+    private readonly scrollService: ScrollService,
     private readonly element: ElementRef,
     private readonly renderer: Renderer2,
+    private readonly router: Router,
   ) {}
+
+  menu = {
+    left: {
+      status: true,
+      mouseEnter: () => { this.menu.left.status = false; },
+      mouseLeave: () => { this.menu.left.status = true; },
+    },
+    right: {
+      status: true,
+      mouseEnter: () => { this.menu.right.status = false; },
+      mouseLeave: () => { this.menu.right.status = true; },
+    },
+  }
 
   ngOnInit(): void {
     this.themeService.getThemeObservable().subscribe(theme => {
@@ -39,5 +56,9 @@ export class MenuComponent implements OnInit {
 
   modeReturn() {
     return this.themeService.mode;
+  }
+
+  scrollTo(componentName?: string) {
+    this.scrollService.scrollToComponent(componentName || '');
   }
 }

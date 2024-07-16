@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 
 import { Service } from '../../../shared/interfaces/service-card.interface';
 import { ServiceCardComponent } from './service-card/service-card.component';
+import { ScrollService } from '../../../shared/services/scroll/scroll.service';
 
 const COMPONENTS = [
   ServiceCardComponent,
@@ -14,7 +15,7 @@ const COMPONENTS = [
   templateUrl: './home-services.component.html',
   styleUrl: './home-services.component.scss'
 })
-export class HomeServicesComponent {
+export class HomeServicesComponent implements AfterViewInit {
   services: Service[] = [
     {
       title: 'Seu site, do seu jeito!',
@@ -32,4 +33,14 @@ export class HomeServicesComponent {
       ico: 'laptop_mac',
     }
   ];
+
+  constructor(
+    private readonly scrollService: ScrollService,
+    private readonly element: ElementRef,
+  ) {}
+
+  ngAfterViewInit(): void {
+    this.scrollService
+      .saveScrollPosition('services', this.element.nativeElement);
+  }
 }

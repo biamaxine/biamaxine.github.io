@@ -10,7 +10,7 @@
       }
   </div>
 
-  <button app-btn class="{{ theme }}">
+  <button (click)="navigateTo(project.id)" app-btn class="{{ theme }}">
     Ver Projeto
     <i> arrow_forward </i>
   </button>

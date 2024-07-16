@@ -2,14 +2,18 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 import { AboutComponent } from '../../shared/components/about/about.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 import { ThemeService } from '../../shared/services/theme/theme.service';
 import { PaletteTheme } from '../../shared/types/palette-theme.type';
+import { HomeProjectsComponent } from './home-projects/home-projects.component';
 import { HomeServicesComponent } from './home-services/home-services.component';
 
 const COMPONENTS = [
   AboutComponent,
   HeaderComponent,
+  IconComponent,
   HomeServicesComponent,
+  HomeProjectsComponent,
 ];
 
 @Component({

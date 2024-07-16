@@ -28,6 +28,8 @@ button.app-btn {
   border-radius: 2.5rem;
   border: none;
 
+  cursor: pointer;
+
   transition: all .3s ease-in-out;
 
   & > i {

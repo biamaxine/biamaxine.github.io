@@ -1,0 +1,18 @@
+<div class="project-card-container">
+
+  <p class="project-card-index hint"> Project #{{ project.id }} </p>
+  <h1 class="project-card-title title_1"> {{ project.title }} </h1>
+  <p class="project-card-subtitle default"> {{ project.subtitle }} </p>
+
+  <div class="project-card-tech-container">
+    @for (tech of project.tech; track tech) {
+        <app-icon [ico]="tech" class="{{ theme }}"/>
+      }
+  </div>
+
+  <button app-btn class="{{ theme }}">
+    Ver Projeto
+    <i> arrow_forward </i>
+  </button>
+
+</div>

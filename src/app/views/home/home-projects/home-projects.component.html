@@ -1,0 +1,10 @@
+<h1 class="home-projects-title title_1"> Alguns de meus trabalhos </h1>
+
+<div class="project-cards-container">
+  @for (project of projects; track project.id) {
+    <app-project-card [project]="project" [theme]="theme"
+    class="{{ theme }}" />
+  }
+
+  <div class="project-ghost"></div>
+</div>

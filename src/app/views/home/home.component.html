@@ -1,4 +1,5 @@
 <app-header [theme]="theme" />
+
 <app-about [theme]="theme">
   <article class="about-left">
     <p class="default"> Posso codar para frontend com Angular, React, Next.js e estou atualmente aprendendo a lidar com Vue.js </p>
@@ -10,4 +11,18 @@
     <p class="default"> E posso documentar facilmente com o Swagger. </p>
   </article>
 </app-about>
+
 <app-home-services />
+
+<app-home-projects [theme]="theme" class="{{ theme }}" />
+
+<footer>
+  <div class="social-media">
+    <app-icon ico="github" class="{{ theme }}" />
+    <app-icon ico="linkedin" class="{{ theme }}" />
+    <app-icon ico="behance" class="{{ theme }}" />
+    <app-icon ico="instagram" class="{{ theme }}" />
+  </div>
+
+  <p class="hint"> © Developed by Bianca Maxine. </p>
+</footer>

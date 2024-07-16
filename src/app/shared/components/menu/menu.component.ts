@@ -44,14 +44,12 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     this.themeService.getThemeObservable().subscribe(theme => {
       this.theme = theme;
-
-      this.themeService.redefineClass(this.element.nativeElement, this.renderer);
+      this.themeService.resetClass(this.element, this.renderer);
     });
   }
 
   modeSwap() {
-    return this.themeService
-      .modeSwap(this.element.nativeElement, this.renderer);
+    return this.themeService.resetMode(this.element, this.renderer);
   }
 
   modeReturn() {
@@ -59,6 +57,11 @@ export class MenuComponent implements OnInit {
   }
 
   scrollTo(componentName?: string) {
-    this.scrollService.scrollToComponent(componentName || '');
+    if (this.router.url !== '/home') {
+      this.router.navigate(['/home']);
+    }
+    setTimeout(() => {
+      this.scrollService.scrollToComponent(componentName || '');
+    }, 300);
   }
 }

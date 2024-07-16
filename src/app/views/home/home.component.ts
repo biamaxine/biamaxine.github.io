@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 import { AboutComponent } from '../../shared/components/about/about.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
@@ -25,7 +25,7 @@ const COMPONENTS = [
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
   theme: PaletteTheme = 'blue_dark';
 
   constructor(
@@ -34,11 +34,11 @@ export class HomeComponent implements AfterViewInit {
     private readonly renderer: Renderer2,
   ) {}
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.themeService.getThemeObservable().subscribe(theme => {
       this.theme = theme;
-
-      this.themeService.redefineClass(this.element.nativeElement, this.renderer);
+      this.themeService
+        .resetClass(this.element, this.renderer);
     });
   }
 }

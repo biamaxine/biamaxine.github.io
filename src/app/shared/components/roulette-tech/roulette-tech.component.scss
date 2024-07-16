@@ -5,10 +5,12 @@
   gap: 1rem;
 
   display: flex;
+  justify-content: center;
 
   div.technologies-container {
     display: flex;
     height: 100%;
+    justify-content: center;
     gap: 1rem;
 
     app-icon {

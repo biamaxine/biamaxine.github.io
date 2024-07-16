@@ -1,4 +1,5 @@
 :host {
+  position: relative;
   width: 100%;
   height: calc(50vh + 1.25rem);
 
@@ -19,5 +20,11 @@
       height: 1.5rem;
       width: 1.5rem;
     }
+  }
+
+  p.header-subtitle {
+    width: 50%;
+
+    text-align: center;
   }
 }

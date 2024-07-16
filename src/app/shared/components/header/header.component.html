@@ -1,11 +1,11 @@
-<app-logoformat class="{{ theme }}"/>
+<ng-content />
 
-<p class="title_2"> Dev Fullstack & UI/UX Designer </p>
+<p class="header-subtitle title_2">
+  {{ subtitle ?? 'Dev Fullstack & UI/UX Designer' }}
+</p>
 
 <div class="social-media-container">
-  <app-icon ico="github" class="{{ theme }}" />
-  <app-icon ico="linkedin" class="{{ theme }}" />
-  <app-icon ico="behance" class="{{ theme }}" />
-  <app-icon ico="instagram" class="{{ theme }}" />
-  <app-icon ico="gmail" class="{{ theme }}" />
+  @for (icon of icons; track icon) {
+    <app-icon [ico]="icon" class="{{ theme }}"/>
+  }
 </div>

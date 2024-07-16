@@ -1,6 +1,10 @@
-<app-header [theme]="theme"/>
+<app-header addSocialMedia [theme]="theme">
+  <app-logoformat class="{{ theme }}"/>
+</app-header>
 
-<app-about [theme]="theme">
+<app-about
+rouletteTech rouletteAnimation
+[theme]="theme">
   <article class="about-left">
     <p class="default"> Posso codar para frontend com Angular, React, Next.js e estou atualmente aprendendo a lidar com Vue.js </p>
     <p class="default"> Posso criar os componentes que você precisa ou se quiser algo mais rápido e prático, posso usar o que há de melhor do Angular Material. </p>

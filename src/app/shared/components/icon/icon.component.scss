@@ -3,6 +3,8 @@
 :host {
   svg {
     width: 100%;
+
+    transition: fill .3s ease-in-out;
   }
 }
 

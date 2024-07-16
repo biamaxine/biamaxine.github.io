@@ -1,0 +1,10 @@
+<div class="about-text-container">
+  <ng-content select="article.about-left" />
+  <button app-btn class="{{ theme }}">
+    Veja Meu Currículo
+    <i> arrow_forward </i>
+  </button>
+  <ng-content select="article.about-right" />
+</div>
+
+<app-roulette-tech [theme]="theme" animation/>

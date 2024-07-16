@@ -20,11 +20,13 @@
 button.app-btn {
   height: 2.5rem;
   display: flex;
+  align-items: center;
   gap: .5rem;
 
   box-sizing: border-box;
   padding: 0 1rem;
   border-radius: 2.5rem;
+  border: none;
 
   transition: all .3s ease-in-out;
 
@@ -37,38 +39,38 @@ button.app-btn {
 button.app-btn {
   &.blue_light {
     @extend .blue_light_accent_bg,
-            .blue_light_accent_contrast_bg;
+            .blue_light_accent_contrast_txt;
 
     &:hover {
       @extend .blue_light_accent_hover_bg,
-              .blue_light_accent_hover_contrast_bg;
+              .blue_light_accent_hover_contrast_txt;
     }
   }
   &.blue_dark {
     @extend .blue_dark_accent_bg,
-            .blue_dark_accent_contrast_bg;
+            .blue_dark_accent_contrast_txt;
 
     &:hover {
       @extend .blue_dark_accent_hover_bg,
-              .blue_dark_accent_hover_contrast_bg;
+              .blue_dark_accent_hover_contrast_txt;
     }
   }
   &.pink_light {
     @extend .pink_light_accent_bg,
-            .pink_light_accent_contrast_bg;
+            .pink_light_accent_contrast_txt;
 
     &:hover {
       @extend .pink_light_accent_hover_bg,
-              .pink_light_accent_hover_contrast_bg;
+              .pink_light_accent_hover_contrast_txt;
     }
   }
   &.pink_dark {
     @extend .pink_dark_accent_bg,
-            .pink_dark_accent_contrast_bg;
+            .pink_dark_accent_contrast_txt;
 
     &:hover {
       @extend .pink_dark_accent_hover_bg,
-              .pink_dark_accent_hover_contrast_bg;
+              .pink_dark_accent_hover_contrast_txt;
     }
   }
 }

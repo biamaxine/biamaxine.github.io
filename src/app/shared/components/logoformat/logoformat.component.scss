@@ -8,6 +8,8 @@
   h1.logoformat-title.display {
     line-height: 100%;
 
+    transition: color .3s ease-in-out;
+
     &.logoformat-title-1 {
       padding-right: 4.5rem;
     }
@@ -24,6 +26,8 @@
 
     padding: 0 1rem;
     border-radius: 2px;
+
+    transition: background-color .3s ease-in-out;
   }
 }
 

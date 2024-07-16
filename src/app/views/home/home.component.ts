@@ -1,10 +1,12 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
+import { AboutComponent } from '../../shared/components/about/about.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
-import { PaletteTheme } from '../../shared/types/palette-theme.type';
 import { ThemeService } from '../../shared/services/theme/theme.service';
+import { PaletteTheme } from '../../shared/types/palette-theme.type';
 
 const COMPONENTS = [
+  AboutComponent,
   HeaderComponent,
 ];
 

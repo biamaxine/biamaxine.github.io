@@ -1,0 +1,24 @@
+:host {
+  height: calc(50vh - 1.25rem);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  padding: 1.5rem 0;
+
+  div.about-text-container {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 1.4rem;
+
+    box-sizing: border-box;
+    padding: 1.5rem 3rem;
+
+    button {
+      white-space: nowrap;
+    }
+  }
+}

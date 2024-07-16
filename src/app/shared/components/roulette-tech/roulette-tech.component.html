@@ -1,0 +1,15 @@
+@if (animation || animation === '') {
+  @for (repeat of [0, 1, 2]; track repeat) {
+    <div class="technologies-container">
+      @for (tech of technologies; track tech) {
+        <app-icon [ico]="tech" class="{{ theme }}" />
+      }
+    </div>
+  }
+} @else {
+  <div class="technologies-container">
+    @for (tech of technologies; track tech) {
+      <app-icon [ico]="tech" class="{{ theme }}" />
+    }
+  </div>
+}

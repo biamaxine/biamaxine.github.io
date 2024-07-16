@@ -1,4 +1,5 @@
 @use './typography.scss';
+@use './palette.scss';
 
 .mat-ico {
   font-family: 'Material Symbols Outlined';
@@ -14,4 +15,60 @@
   direction: ltr;
 
   user-select: none;
+}
+
+button.app-btn {
+  height: 2.5rem;
+  display: flex;
+  gap: .5rem;
+
+  box-sizing: border-box;
+  padding: 0 1rem;
+  border-radius: 2.5rem;
+
+  transition: all .3s ease-in-out;
+
+  & > i {
+    @extend .mat-ico;
+  }
+}
+
+// palette settings
+button.app-btn {
+  &.blue_light {
+    @extend .blue_light_accent_bg,
+            .blue_light_accent_contrast_bg;
+
+    &:hover {
+      @extend .blue_light_accent_hover_bg,
+              .blue_light_accent_hover_contrast_bg;
+    }
+  }
+  &.blue_dark {
+    @extend .blue_dark_accent_bg,
+            .blue_dark_accent_contrast_bg;
+
+    &:hover {
+      @extend .blue_dark_accent_hover_bg,
+              .blue_dark_accent_hover_contrast_bg;
+    }
+  }
+  &.pink_light {
+    @extend .pink_light_accent_bg,
+            .pink_light_accent_contrast_bg;
+
+    &:hover {
+      @extend .pink_light_accent_hover_bg,
+              .pink_light_accent_hover_contrast_bg;
+    }
+  }
+  &.pink_dark {
+    @extend .pink_dark_accent_bg,
+            .pink_dark_accent_contrast_bg;
+
+    &:hover {
+      @extend .pink_dark_accent_hover_bg,
+              .pink_dark_accent_hover_contrast_bg;
+    }
+  }
 }

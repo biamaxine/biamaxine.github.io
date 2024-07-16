@@ -1,0 +1,7 @@
+<h1 class="home-service-title title_1"> Veja como posso ajudá-lo </h1>
+
+<div class="service-cards-container">
+  @for (service of services; track service) {
+    <app-service-card [service]="service" />
+  }
+</div>

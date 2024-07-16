@@ -4,10 +4,12 @@ import { AboutComponent } from '../../shared/components/about/about.component';
 import { HeaderComponent } from '../../shared/components/header/header.component';
 import { ThemeService } from '../../shared/services/theme/theme.service';
 import { PaletteTheme } from '../../shared/types/palette-theme.type';
+import { HomeServicesComponent } from './home-services/home-services.component';
 
 const COMPONENTS = [
   AboutComponent,
   HeaderComponent,
+  HomeServicesComponent,
 ];
 
 @Component({

@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  box-sizing: border-box;
+  padding: 1.5rem 3rem;
+
+  div.service-cards-container {
+    display: flex;
+    gap: 1.5rem;
+  }
+}

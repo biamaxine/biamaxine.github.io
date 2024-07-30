@@ -20,7 +20,10 @@ const COMPONENTS = [
 export class HeaderComponent implements OnInit {
   @Input({ required: true }) theme!: PaletteTheme;
   @Input() addSocialMedia: boolean | '' = false;
-  @Input() icons: Icon[] = [];
+  @Input() icons: {
+    ico: Icon,
+    link?: string,
+  }[] = [];
   @Input() subtitle?: string;
 
   constructor(
@@ -30,7 +33,13 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.addSocialMedia || this.addSocialMedia === '') {
-      this.icons = ['github', 'linkedin', 'behance', 'instagram', 'gmail'];
+      this.icons = [
+        { ico: 'github' },
+        { ico: 'linkedin' },
+        { ico: 'behance' },
+        { ico: 'instagram' },
+        { ico: 'gmail' },
+      ];
     }
   }
 }

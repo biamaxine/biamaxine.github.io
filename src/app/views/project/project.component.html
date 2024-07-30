@@ -1,5 +1,5 @@
 @if (project) {
-  <app-header [icons]="['figma', 'behance']"
+  <app-header [icons]="project.tech"
   [theme]="theme" [subtitle]="project.subtitle">
     <div class="app-header-title-container">
       <h1 class="app-header-title display"> {{ project.title }} </h1>

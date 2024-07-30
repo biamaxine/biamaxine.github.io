@@ -6,7 +6,7 @@
 
   <div class="project-card-tech-container">
     @for (tech of project.tech; track tech) {
-      <app-icon [ico]="tech.ico" class="{{ theme }}"/>
+      <app-icon [ico]="tech.ico" [link]="tech.link" class="{{ theme }}"/>
     }
   </div>
 

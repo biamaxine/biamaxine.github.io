@@ -5,7 +5,7 @@
 </p>
 
 <div class="social-media-container">
-  @for (icon of icons; track icon) {
-    <app-icon [ico]="icon" class="{{ theme }}"/>
+  @for (ico of icons; track ico) {
+    <app-icon [ico]="ico.ico" [link]="ico.link" class="{{ theme }}"/>
   }
 </div>

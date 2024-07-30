@@ -1,0 +1,11 @@
+<div class="img-loader-container">
+  <div class="img-loader-content">
+
+    @if (!status) {
+      <app-loading />
+    } @else {
+      <img [src]="url" (load)="onImageLoad()" (error)="onImageError()" />
+    }
+
+  </div>
+</div>

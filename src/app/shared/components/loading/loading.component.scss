@@ -1,0 +1,105 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  div.loading-container {
+    display: grid;
+    grid-template-columns: 2.5rem 2.5rem;
+    gap: .5rem;
+
+    div.square {
+      height: 2.5rem;
+      width: 2.5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+
+        box-sizing: border-box;
+        border: 2px solid;
+
+        animation: roll 3s linear infinite;
+      }
+
+      $s: 3s;
+      &.square_1 {
+        animation: top-left $s ease-in-out infinite;
+      }
+
+      &.square_2 {
+        animation: top-right $s ease-in-out infinite;
+      }
+
+      &.square_3 {
+        animation: bot-right $s ease-in-out infinite;
+      }
+
+      &.square_4 {
+        animation: bot-left $s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes roll {
+  from { transform: rotate(0); }
+  25% {
+    height: 50%;
+    width: 50%;
+    transform: rotate(-90deg);
+  }
+  50% {
+    height: 100%;
+    width: 100%;
+    transform: rotate(-180deg);
+  }
+  75% {
+    height: 50%;
+    width: 50%;
+    transform: rotate(-270deg);
+  }
+  to {
+    height: 100%;
+    width: 100%;
+    transform: rotate(-360deg);
+  }
+}
+
+$d: 3rem;
+@keyframes top-left {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate($d, 0); }
+  50% { transform: translate($d, $d); }
+  75% { transform: translate(0, $d); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes top-right {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(0, $d); }
+  50% { transform: translate(-$d, $d); }
+  75% { transform: translate(-$d, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bot-left {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-$d, 0); }
+  50% { transform: translate(-$d, -$d); }
+  75% { transform: translate(0, -$d); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes bot-right {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(0, -$d); }
+  50% { transform: translate($d, -$d); }
+  75% { transform: translate($d, 0); }
+  100% { transform: translate(0, 0); }
+}

@@ -1,8 +1,9 @@
-import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
 
 import { Service } from '../../../shared/interfaces/service-card.interface';
 import { ServiceCardComponent } from './service-card/service-card.component';
 import { ScrollService } from '../../../shared/services/scroll/scroll.service';
+import { PaletteTheme } from '../../../shared/types/palette-theme.type';
 
 const COMPONENTS = [
   ServiceCardComponent,
@@ -16,6 +17,8 @@ const COMPONENTS = [
   styleUrl: './home-services.component.scss'
 })
 export class HomeServicesComponent implements AfterViewInit {
+  @Input({ required: true }) theme!: PaletteTheme;
+
   services: Service[] = [
     {
       title: 'Seu site, do seu jeito!',

@@ -7,7 +7,7 @@ import { PaletteTheme } from '../../types/palette-theme.type';
   providedIn: 'root'
 })
 export class ThemeService {
-  private _theme: PaletteTheme = 'blue_dark';
+  private _theme: PaletteTheme = 'blue_light';
   private themeSubject: BehaviorSubject<PaletteTheme> =
     new BehaviorSubject(this._theme);
 

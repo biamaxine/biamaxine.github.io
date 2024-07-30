@@ -3,18 +3,18 @@
 $map: (
   'blue': (
     100: hsl(250, 50%, 90%), 300: hsl(250, 50%, 70%),
-    600: hsl(250, 50%, 40%), 900: hsl(250, 50%, 10%),
+    600: hsl(250, 50%, 40%), 1000: hsl(250, 50%, 0%),
     'contrast': (
-      100: hsl(250, 49%, 10%), 300: hsl(250, 50%, 10%),
-      600: hsl(250, 50%, 90%), 900: hsl(250, 50%, 90%),
+      100: hsl(250, 49%, 0%), 300: hsl(250, 50%, 0%),
+      600: hsl(250, 50%, 90%), 1000: hsl(250, 50%, 90%),
     ),
   ),
   'pink': (
-    100: hsl(330, 50%, 90%), 300: hsl(330, 50%, 70%),
-    600: hsl(330, 50%, 40%), 900: hsl(330, 50%, 10%),
+    100: hsl(300, 50%, 90%), 300: hsl(300, 50%, 70%),
+    600: hsl(300, 50%, 40%), 1000: hsl(300, 50%, 0%),
     'contrast': (
-      100: hsl(330, 50%, 10%), 300: hsl(330, 50%, 10%),
-      600: hsl(330, 50%, 90%), 900: hsl(330, 50%, 90%),
+      100: hsl(300, 50%, 0%), 300: hsl(300, 50%, 0%),
+      600: hsl(300, 50%, 90%), 1000: hsl(300, 50%, 90%),
     ),
   ),
 );
@@ -46,21 +46,21 @@ $map: (
 $palette: (
   'blue': (
     'light': (
-      'primary': ('blue', 100), 'secondary': ('blue', 900),
+      'primary': ('blue', 100), 'secondary': ('blue', 1000),
       'accent': ('pink', 300), 'accent_hover': ('pink', 600),
     ),
     'dark': (
-      'primary': ('blue', 900), 'secondary': ('blue', 100),
+      'primary': ('blue', 1000), 'secondary': ('blue', 100),
       'accent': ('pink', 600), 'accent_hover': ('pink', 300),
     ),
   ),
   'pink': (
     'light': (
-      'primary': ('pink', 100), 'secondary': ('pink', 900),
+      'primary': ('pink', 100), 'secondary': ('pink', 1000),
       'accent': ('blue', 300), 'accent_hover': ('blue', 600),
     ),
     'dark': (
-      'primary': ('pink', 900), 'secondary': ('pink', 100),
+      'primary': ('pink', 1000), 'secondary': ('pink', 100),
       'accent': ('blue', 600), 'accent_hover': ('blue', 300),
     ),
   ),

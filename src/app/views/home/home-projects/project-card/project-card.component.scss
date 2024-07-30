@@ -27,6 +27,8 @@
 
     text-align: center;
 
+    transition: all .3s ease-in-out;
+
     div.project-card-tech-container {
       display: flex;
       gap: .5rem;
@@ -41,63 +43,19 @@
 
 // palette settings
 :host {
-  &.blue_light {
-    @extend .blue_light_secondary_bg,
-            .blue_light_secondary_contrast_txt;
+  $palettes: ('blue_light', 'blue_dark', 'pink_light', 'pink_dark');
 
-    &:hover {
-      @extend .blue_light_primary_bg,
-              .blue_light_secondary_border;
+  @each $palette in $palettes {
+    &.#{$palette} {
+      @extend .#{$palette}_primary_bg,
+              .#{$palette}_primary_contrast_border;
 
       div.project-card-container {
-        @extend .blue_light_secondary_bg,
-                .blue_light_secondary_contrast_txt;
-
+        @extend .#{$palette}_primary_bg,
+                .#{$palette}_primary_contrast_txt;
       }
-    }
-  }
-  &.blue_dark {
-    @extend .blue_dark_secondary_bg,
-            .blue_dark_secondary_contrast_txt;
-
-    &:hover {
-      @extend .blue_dark_primary_bg,
-              .blue_dark_secondary_border;
-
-      div.project-card-container {
-        @extend .blue_dark_secondary_bg,
-                .blue_dark_secondary_contrast_txt;
-
-      }
-    }
-  }
-  &.pink_light {
-    @extend .pink_light_secondary_bg,
-            .pink_light_secondary_contrast_txt;
-
-    &:hover {
-      @extend .pink_light_primary_bg,
-              .pink_light_secondary_border;
-
-      div.project-card-container {
-        @extend .pink_light_secondary_bg,
-                .pink_light_secondary_contrast_txt;
-
-      }
-    }
-  }
-  &.pink_dark {
-    @extend .pink_dark_secondary_bg,
-            .pink_dark_secondary_contrast_txt;
-
-    &:hover {
-      @extend .pink_dark_primary_bg,
-              .pink_dark_secondary_border;
-
-      div.project-card-container {
-        @extend .pink_dark_secondary_bg,
-                .pink_dark_secondary_contrast_txt;
-
+      &:hover {
+        @extend .#{$palette}_primary_contrast_bg;
       }
     }
   }

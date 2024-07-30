@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
 
 import { environment } from '../../../../environments/environment.development';
-import { Project } from '../../../shared/interfaces/project.interface';
+import { Project, Server } from '../../../shared/interfaces/project.interface';
 import { ScrollService } from '../../../shared/services/scroll/scroll.service';
 import { PaletteTheme } from '../../../shared/types/palette-theme.type';
 import { ProjectCardComponent } from './project-card/project-card.component';
@@ -33,9 +33,8 @@ export class HomeProjectsComponent implements AfterViewInit {
     this.scrollService
       .saveScrollPosition('projects', this.element.nativeElement);
 
-    this.http.get<Project[]>(environment.url_local + '/projects')
-      .subscribe(projects => {
-        this.projects = projects;
+    this.http.get<Server>(environment.url).subscribe(server => {
+        this.projects = server.projects;
       });
   }
 }

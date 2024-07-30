@@ -1,0 +1,116 @@
+@use '../../../styles/palette.scss';
+
+:host {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateY(-2.5rem);
+
+  box-sizing: border-box;
+  padding-bottom: 1.5rem;
+
+  transition: all .3s ease-in-out;
+
+  app-header {
+    div.app-header-title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+
+      h1.app-header-title {
+        transition: color .3s ease-in-out;
+      }
+
+      span.app-header-underline {
+        height: 2px;
+        width: 100%;
+        display: flex;
+
+        border-radius: 2px;
+        padding: 0 1rem;
+
+        transition: background-color .3s ease-in-out;
+      }
+    }
+  }
+
+  app-about {
+    article.about-left,
+    article.about-right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .5rem;
+
+      p { text-align: center; }
+    }
+  }
+
+  div.img-loader-container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    padding: 0 6rem;
+  }
+
+  button {
+    margin: 1.5rem 0;
+  }
+
+  $height: 15rem;
+  footer {
+    position: absolute;
+    bottom: -$height;
+
+    height: $height;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    transition: all .3s ease-in-out;
+
+    div.social-media {
+      display: flex;
+      gap: .5rem;
+
+      app-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+:host {
+  $palettes: ('blue_light', 'blue_dark', 'pink_light', 'pink_dark');
+
+  @each $palette in $palettes {
+    &.#{$palette} {
+      @extend .#{$palette}_primary_bg,
+              .#{$palette}_primary_contrast_txt;
+
+      app-header span.app-header-underline {
+        @extend .#{$palette}_primary_contrast_bg;
+      }
+
+      footer {
+        @extend .#{$palette}_secondary_bg,
+                .#{$palette}_secondary_contrast_txt;
+      }
+    }
+  }
+}

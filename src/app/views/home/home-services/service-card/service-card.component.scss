@@ -1,4 +1,7 @@
+@use '../../../../../styles/palette.scss';
+
 :host {
+  height: 100%;
   width: calc(100% / 3);
 
   display: flex;
@@ -8,6 +11,8 @@
   box-sizing: border-box;
   padding: .5rem;
   border: 1px solid;
+
+  transition: background-color .3s ease-in-out;
 
   div.service-card-container {
     height: 100%;
@@ -25,5 +30,26 @@
 
     text-align: center;
     line-height: 110%;
+  }
+}
+
+// palette settings
+:host {
+  $palettes: ('blue_light', 'blue_dark', 'pink_light', 'pink_dark');
+
+  @each $palette in $palettes {
+    &.#{$palette} {
+      @extend .#{$palette}_primary_bg,
+              .#{$palette}_primary_contrast_txt;
+
+      div.service-card-container {
+        @extend .#{$palette}_primary_bg,
+                .#{$palette}_primary_contrast_txt;
+      }
+
+      &:hover {
+        @extend .#{$palette}_secondary_bg;
+      }
+    }
   }
 }

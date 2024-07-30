@@ -1,1 +1,51 @@
-<p>project works!</p>
+@if (project) {
+  <app-header [icons]="['figma', 'behance']"
+  [theme]="theme" [subtitle]="project.subtitle">
+    <div class="app-header-title-container">
+      <h1 class="app-header-title display"> {{ project.title }} </h1>
+      <span class="app-header-underline"></span>
+    </div>
+  </app-header>
+
+  <app-about
+  rouletteTech [rouletteTechnologies]="['angular', 'nestjs', 'figma']"
+  (button)="scrollTo('img')"
+  buttonText="Ver Projeto"
+  buttonIco="arrow_downward"
+  [theme]="theme">
+    <article class="about-left">
+      @for (paragraph of project.resume.article_left; track paragraph) {
+        <p class="default"> {{ paragraph }} </p>
+      }
+    </article>
+    <article class="about-right">
+      @for (paragraph of project.resume.article_right; track paragraph) {
+        <p class="default"> {{ paragraph }} </p>
+      }
+    </article>
+  </app-about>
+
+  @if (project.files.img) {
+    <div class="img-loader-container">
+      <app-img-loader [url]="project.files.img" class="{{ theme }}"/>
+    </div>
+  }
+
+  <button (click)="scrollTo()" app-btn class="{{ theme }}">
+    Voltar ao Inicio
+    <i> arrow_upward </i>
+  </button>
+}
+
+<footer>
+  <div class="social-media">
+    <app-icon ico="github" class="{{ theme }}" />
+    <app-icon ico="linkedin" class="{{ theme }}" />
+    <app-icon ico="behance" class="{{ theme }}" />
+    <app-icon ico="instagram" class="{{ theme }}" />
+    <app-icon ico="gmail" class="{{ theme }}" />
+  </div>
+
+  <p class="hint"> © Developed by Bianca Maxine. </p>
+</footer>
+

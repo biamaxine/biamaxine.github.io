@@ -6,8 +6,8 @@
 
   <div class="project-card-tech-container">
     @for (tech of project.tech; track tech) {
-        <app-icon [ico]="tech" class="{{ theme }}"/>
-      }
+      <app-icon [ico]="tech.ico" class="{{ theme }}"/>
+    }
   </div>
 
   <button (click)="navigateTo(project.id)" app-btn class="{{ theme }}">

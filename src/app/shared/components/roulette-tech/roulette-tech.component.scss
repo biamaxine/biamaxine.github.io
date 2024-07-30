@@ -1,7 +1,7 @@
 :host {
   overflow: hidden;
   max-width: 100%;
-  height: 4rem;
+  height: 3rem;
   gap: 1rem;
 
   display: flex;
@@ -11,10 +11,12 @@
     display: flex;
     height: 100%;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 
     app-icon {
-      width: 4rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 

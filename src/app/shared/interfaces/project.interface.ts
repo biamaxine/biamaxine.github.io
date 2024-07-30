@@ -1,4 +1,4 @@
-import { TechnologiesIcons } from '../types/icon.type';
+import { TechnologyIcon } from '../types/icon.type';
 
 export interface Server {
   projects: Project[];
@@ -8,7 +8,10 @@ export interface Project {
   id: string;
   title: string;
   subtitle: string;
-  tech: TechnologiesIcons[],
+  tech: {
+    ico: TechnologyIcon;
+    link?: string;
+  }[],
   files: {
     pdf?: string;
     img?: string;

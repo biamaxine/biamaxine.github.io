@@ -1,8 +1,8 @@
 <div class="about-text-container">
   <ng-content select="article.about-left" />
-  <button app-btn class="{{ theme }}">
+  <button (click)="onClick()" app-btn class="{{ theme }}">
     {{ buttonText ?? 'Veja Meu Currículo' }}
-    <i> arrow_forward </i>
+    <i> {{ buttonIco ?? 'arrow_forward' }} </i>
   </button>
   <ng-content select="article.about-right" />
 </div>

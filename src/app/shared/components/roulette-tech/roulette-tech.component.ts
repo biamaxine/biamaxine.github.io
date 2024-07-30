@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
-import { TechnologiesIcons } from '../../types/icon.type';
+import { TechnologyIcon } from '../../types/icon.type';
 import { IconComponent } from '../icon/icon.component';
 import { PaletteTheme } from '../../types/palette-theme.type';
 
@@ -18,12 +18,7 @@ const COMPONENTS = [
 export class RouletteTechComponent implements OnInit {
   @Input({ required: true }) theme!: PaletteTheme;
   @Input() animation: boolean | '' = false;
-  @Input() technologies: TechnologiesIcons[] = [
-    'angular', 'react',  'next.js',    'vue.js',
-    'node.js', 'nestjs', 'javascript', 'typescript',
-    'java',    'python', 'git',        'docker',
-    'html5',   'css3',   'sass',       'figma',
-  ];
+  @Input() technologies?: TechnologyIcon[];
 
   constructor(
     private readonly element: ElementRef,
@@ -31,6 +26,14 @@ export class RouletteTechComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (!this.technologies) this.technologies = [
+      'angular',    'react',      'next.js', 'vue.js',
+      'node.js',    'nestjs',     'prisma',  'swagger',
+      'javascript', 'typescript', 'java',    'python',
+      'git',        'docker',     'html5',   'css3',
+      'sass',       'figma',
+    ];
+
     if (this.animation || this.animation === '') this.renderer
       .addClass(this.element.nativeElement, 'RouletteTechAnimated');
   }

@@ -55,40 +55,17 @@
 
 // palette settings
 :host {
-  &.blue_light {
-    @extend .blue_light_primary_bg,
-            .blue_light_primary_contrast_txt;
+  $palettes: ('blue_light', 'blue_dark', 'pink_light', 'pink_dark');
 
-    footer {
-      @extend .blue_light_secondary_bg,
-              .blue_light_secondary_contrast_txt;
-    }
-  }
-  &.blue_dark {
-    @extend .blue_dark_primary_bg,
-            .blue_dark_primary_contrast_txt;
+  @each $palette in $palettes {
+    &.#{$palette} {
+      @extend .#{$palette}_primary_bg,
+            .#{$palette}_primary_contrast_txt;
 
-    footer {
-      @extend .blue_dark_secondary_bg,
-              .blue_dark_secondary_contrast_txt;
-    }
-  }
-  &.pink_light {
-    @extend .pink_light_primary_bg,
-            .pink_light_primary_contrast_txt;
-
-    footer {
-      @extend .pink_light_secondary_bg,
-              .pink_light_secondary_contrast_txt;
-    }
-  }
-  &.pink_dark {
-    @extend .pink_dark_primary_bg,
-            .pink_dark_primary_contrast_txt;
-
-    footer {
-      @extend .pink_dark_secondary_bg,
-              .pink_dark_secondary_contrast_txt;
+      footer {
+        @extend .#{$palette}_secondary_bg,
+                .#{$palette}_secondary_contrast_txt;
+      }
     }
   }
 }

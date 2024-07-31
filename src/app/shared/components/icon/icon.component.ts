@@ -23,7 +23,7 @@ export class IconComponent implements OnInit {
 
     if (!this.link) {
       switch(this.ico) {
-        case 'behance': this.link = 'behance.net/bianca_maxine_'; break
+        case 'behance': this.link = 'https://behance.net/bianca_maxine_'; break
         case 'github': this.link = 'https://github.com/biamaxine'; break
         case 'gmail': this.link = 'mailto:bianca.maxine.dev@gmail.com'; break
         case 'instagram': this.link = 'https://instagram.com/biamaxine_'; break

@@ -1,7 +1,7 @@
 @use '../../../../styles/palette.scss';
 
 :host {
-  min-height: 100vh;
+  // min-height: 100vh;
   width: 100%;
 
   display: flex;
@@ -23,11 +23,36 @@
       height: 100%;
       min-width: 290px;
       width: 100%;
-      display: block;
 
-      opacity: .05;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      transition: opacity .3s ease-in-out;
+      box-sizing: border-box;
+      border: 1px solid;
+      padding: .5rem;
+
+      opacity: 0;
+
+      transition: all .3s ease-in-out;
+
+      p { display: none; }
+
+      &::before {
+        content: 'Mais projetos em breve...';
+
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 700;
+
+        box-sizing: border-box;
+        border: 1px solid;
+      }
 
       &:hover { opacity: .15; }
     }
@@ -36,24 +61,15 @@
 
 // palette settings
 :host {
-  &.blue_light {
-    div.project-cards-container div.project-ghost {
-      @extend .blue_light_secondary_bg;
-    }
-  }
-  &.blue_dark {
-    div.project-cards-container div.project-ghost {
-      @extend .blue_dark_secondary_bg;
-    }
-  }
-  &.pink_light {
-    div.project-cards-container div.project-ghost {
-      @extend .pink_light_secondary_bg;
-    }
-  }
-  &.pink_dark {
-    div.project-cards-container div.project-ghost {
-      @extend .pink_dark_secondary_bg;
+  $palettes: ('blue_light', 'blue_dark', 'pink_light', 'pink_dark');
+
+  @each $palette in $palettes {
+    &.#{$palette} {
+      div.project-cards-container div.project-ghost {
+        &::before {
+          @extend .#{$palette}_primary_bg;
+        }
+      }
     }
   }
 }

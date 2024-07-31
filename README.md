@@ -1,27 +1,38 @@
-# Frontend
+# Meu Portfolio - Bia Maxine
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+Bem-vindo ao meu portfólio pessoal! 🚀
 
-## Development server
+Você pode acessá-lo em: [biamaxine.github.io](https://biamaxine.github.io)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Sobre a Aplicação
 
-## Code scaffolding
+Este portfólio foi desenvolvido para apresentar meus projetos como Dev Fullstack e UI/UX Designer. A aplicação foi construída em __Angular__ e consome dados de um arquivo JSON armazenado em outro repositório no GitHub, permitindo a exibição dinâmica dos meus projetos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🛠 Tecnologias Utilizadas
+- __Angular__: Utilizado para construir a estrutura da aplicação.
+- __Figma__: Ferramenta usada para criar o wireframe, design system e protótipo de alta fidelidade.
+- __JSON__: Utilizado para armazenar e consumir os dados dos projetos apresentados na plataforma.
 
-## Build
+### 🚀 Processo de Desenvolvimento
+1. __Wireframe__: A concepção inicial da aplicação foi feita no __Figma__ como parte de um projeto para alguns cursos de UI/UX Design na __DIO__.
+2. __Design System__: Desenvolvi um design system para garantir consistência e eficiência na produção das interfaces.
+3. __Protótipo de Alta Fidelidade__: Ainda para os cursos da DIO, criei um protótipo de alta fidelidade, também no __Figma__ como etapa final do projeto.
+4. __Implementação__: Com o design pronto, iniciei o desenvolvimento em __Angular__, integrando os dados do portfólio a partir de um arquivo JSON.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 📁 Estrutura de Dados
+Os dados dos projetos exibidos no portfólio são consumidos a partir do arquivo JSON hospedado em: [db.projects.json](https://biamaxine.github.io/json-server/db.projects.json).
 
-## Running unit tests
+### 🌐 Acesso ao Portfólio
+Explore meus trabalhos e veja de perto o que tenho criado em [biamaxine.github.io](https://biamaxine.github.io).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+### 📧 Contato
+Se você quiser saber mais ou discutir oportunidades de colaboração, sinta-se à vontade para entrar em contato.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+__E-mail:__ [bianca.maxine.dev@gmail.com](mailto:bianca.maxine.dev@gmail.com)
+__LinkedIn:__ [linkedin.com/in/biamaxine](https://linkedin.com/in/biamaxine)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+__© 2024 Bianca Maxine__

@@ -1,5 +1,5 @@
 :host {
-  min-height: 100vh;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
     gap: 1.5rem;
 
     box-sizing: border-box;
-    padding-bottom: 4.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -29,10 +29,13 @@
 
     div.service-cards-container {
       gap: 1rem;
+      padding-bottom: 0;
     }
   }
 
   @media screen and (max-width: 720px) {
+    height: auto;
+
     div.service-cards-container {
       flex-direction: column;
     }

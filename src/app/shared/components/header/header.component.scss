@@ -25,6 +25,20 @@
   p.header-subtitle {
     width: 50%;
 
+    box-sizing: border-box;
+
     text-align: center;
+
+    transition: all .3s ease-in-out;
+  }
+}
+
+:host {
+  @media screen and (max-width: 720px) {
+    p.header-subtitle {
+      width: 100%;
+
+      padding: 0 1rem;
+    }
   }
 }

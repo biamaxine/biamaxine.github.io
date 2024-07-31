@@ -25,7 +25,7 @@ export class IconComponent implements OnInit {
       switch(this.ico) {
         case 'behance': this.link = 'behance.net/bianca_maxine_'; break
         case 'github': this.link = 'https://github.com/biamaxine'; break
-        case 'gmail': this.link = 'bianca.maxine.dev@gmail.com'; break
+        case 'gmail': this.link = 'mailto:bianca.maxine.dev@gmail.com'; break
         case 'instagram': this.link = 'https://instagram.com/biamaxine_'; break
         case 'linkedin': this.link = 'https://linkedin.com/in/biamaxine'; break
       }

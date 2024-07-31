@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { environment } from '../../../environments/environment.development';
@@ -32,7 +32,7 @@ const DIRECTIVES = [
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent implements OnInit {
-  theme: PaletteTheme = 'blue_dark';
+  theme!: PaletteTheme;
   project!: Project;
 
   constructor(
@@ -55,7 +55,6 @@ export class ProjectComponent implements OnInit {
     this.http.get<Server>(environment.url).subscribe(server => {
       const project = server.projects.find(project => project.id === id);
       if (project) this.project = project;
-      console.log(this.project);
     });
   }
 

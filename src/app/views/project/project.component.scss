@@ -62,6 +62,8 @@
 
     box-sizing: border-box;
     padding: 0 6rem;
+
+    transition: all .3s ease-in-out;
   }
 
   button {
@@ -111,6 +113,24 @@
         @extend .#{$palette}_secondary_bg,
                 .#{$palette}_secondary_contrast_txt;
       }
+    }
+  }
+}
+
+:host {
+  @media screen and (max-width: 1024px) {
+    app-about {
+      article.about-left,
+      article.about-right {
+        width: 100%;
+        gap: 0;
+
+        p { font-size: .75rem; }
+      }
+    }
+
+    div.img-loader-container {
+      padding: 1rem;
     }
   }
 }

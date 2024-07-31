@@ -92,3 +92,17 @@
     }
   }
 }
+
+:host {
+  @media screen and (max-width: 720px) {
+    app-about {
+      article.about-left,
+      article.about-right {
+        width: 100%;
+        gap: 0;
+
+        p { font-size: .75rem; }
+      }
+    }
+  }
+}

@@ -34,7 +34,7 @@ export class HomeProjectsComponent implements AfterViewInit {
       .saveScrollPosition('projects', this.element.nativeElement);
 
     this.http.get<Server>(environment.url).subscribe(server => {
-        this.projects = server.projects;
-      });
+      this.projects = server.projects;
+    });
   }
 }

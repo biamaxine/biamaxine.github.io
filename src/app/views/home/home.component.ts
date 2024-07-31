@@ -41,4 +41,9 @@ export class HomeComponent implements OnInit {
         .resetClass(this.element, this.renderer);
     });
   }
+
+  onNavigate(): void {
+    const curriculum = 'https://drive.google.com/file/d/1uaj5ZXFv7N9kr2Wr0y_2YMea04wZrPad/view?usp=sharing'
+    window.open(curriculum, '_blank')
+  }
 }

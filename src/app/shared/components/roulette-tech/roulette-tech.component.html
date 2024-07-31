@@ -3,7 +3,7 @@
     <div class="technologies-container">
       @if (technologies) {
         @for (tech of technologies; track tech) {
-          <app-icon [ico]="tech" class="{{ theme }}" />
+          <app-icon [ico]="tech.ico" [link]="tech.link" class="{{ theme }}" />
         }
       }
     </div>
@@ -12,7 +12,7 @@
   <div class="technologies-container">
     @if (technologies) {
       @for (tech of technologies; track tech) {
-        <app-icon [ico]="tech" class="{{ theme }}" />
+        <app-icon [ico]="tech.ico" [link]="tech.link" class="{{ theme }}" />
       }
     }
   </div>

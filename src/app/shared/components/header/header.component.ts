@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
-import { Icon } from '../../types/icon.type';
+import { Icon, SocialMediaIcon } from '../../types/icon.type';
 import { PaletteTheme } from '../../types/palette-theme.type';
 import { IconComponent } from '../icon/icon.component';
 import { LogoformatComponent } from '../logoformat/logoformat.component';
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   @Input({ required: true }) theme!: PaletteTheme;
   @Input() addSocialMedia: boolean | '' = false;
   @Input() icons: {
-    ico: Icon,
+    ico: SocialMediaIcon,
     link?: string,
   }[] = [];
   @Input() subtitle?: string;

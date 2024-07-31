@@ -8,17 +8,39 @@
   box-sizing: border-box;
   padding: 1.5rem 0;
 
+  transition: all .3s ease-in-out;
+
   div.about-text-container {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    gap: 1.4rem;
+    gap: 1.5rem;
 
     box-sizing: border-box;
     padding: 1.5rem 3rem;
 
     button {
       white-space: nowrap;
+    }
+  }
+}
+
+// Media Queries
+:host {
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+
+    div.about-text-container {
+      gap: 1rem;
+      padding: 0 1rem;
+
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    div.about-text-container {
+      flex-direction: column;
     }
   }
 }

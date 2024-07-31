@@ -57,3 +57,13 @@
     }
   }
 }
+
+:host {
+  @media screen and (max-width: 1024px) {
+    padding: 1rem;
+
+    div.project-cards-container {
+      gap: 1rem;
+    }
+  }
+}

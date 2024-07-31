@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { ButtonDirective } from '../../directives/button/button.directive';
-import { RouletteTechComponent } from '../roulette-tech/roulette-tech.component';
+import { Icon } from '../../types/icon.type';
 import { PaletteTheme } from '../../types/palette-theme.type';
-import { TechnologyIcon } from '../../types/icon.type';
+import { RouletteTechComponent } from '../roulette-tech/roulette-tech.component';
 
 const COMPONENTS = [
   RouletteTechComponent,
@@ -23,14 +23,17 @@ const DIRECTIVES = [
 export class AboutComponent {
   @Input({ required: true }) theme!: PaletteTheme;
 
+  @Output() button = new EventEmitter();
   @Input() buttonText?: string;
   @Input() buttonIco?: string;
 
   @Input() rouletteTech: boolean | '' = false;
   @Input() rouletteAnimation: boolean | '' = false;
-  @Input() rouletteTechnologies?: TechnologyIcon[];
+  @Input() rouletteTechnologies?: {
+    ico: Icon,
+    link?: string,
+  }[];
 
-  @Output() button = new EventEmitter();
 
   onClick(): void {
     this.button.emit();

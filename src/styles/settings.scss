@@ -18,6 +18,8 @@
 }
 
 button.app-btn {
+  @extend .button;
+
   height: 2.5rem;
   display: flex;
   align-items: center;
@@ -34,6 +36,13 @@ button.app-btn {
 
   & > i {
     @extend .mat-ico;
+  }
+
+  @media screen and (max-width: 720px) {
+    & {
+      height: 2rem;
+      font-size: .75rem;
+    }
   }
 }
 

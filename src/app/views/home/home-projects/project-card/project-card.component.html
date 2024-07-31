@@ -5,8 +5,8 @@
   <p class="project-card-subtitle default"> {{ project.subtitle }} </p>
 
   <div class="project-card-tech-container">
-    @for (tech of project.tech; track tech) {
-      <app-icon [ico]="tech.ico" [link]="tech.link" class="{{ theme }}"/>
+    @for (media of project.medias; track media) {
+      <app-icon [ico]="media.ico" [link]="media.link" class="{{ theme }}"/>
     }
   </div>
 

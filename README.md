@@ -19,6 +19,8 @@ Este portfólio foi desenvolvido para apresentar meus projetos como Dev Fullstac
 3. __Protótipo de Alta Fidelidade__: Ainda para os cursos da DIO, criei um protótipo de alta fidelidade, também no __Figma__ como etapa final do projeto.
 4. __Implementação__: Com o design pronto, iniciei o desenvolvimento em __Angular__, integrando os dados do portfólio a partir de um arquivo JSON.
 
+O projeto Figma pode ser acessado cliacando _[aqui](https://www.figma.com/design/CCjGBqopru3OXpEOopKxcY/Untitled?node-id=0-1&t=pK9PGunEy7sUFIXD-1)_.
+
 ### 📁 Estrutura de Dados
 Os dados dos projetos exibidos no portfólio são consumidos a partir do arquivo JSON hospedado em: [db.projects.json](https://biamaxine.github.io/json-server/db.projects.json).
 

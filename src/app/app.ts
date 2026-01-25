@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
 
     <router-outlet />
   `,
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('biamaxine');

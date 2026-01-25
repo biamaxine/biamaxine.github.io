@@ -15,6 +15,10 @@ html {
     typography: Comfortaa,
     density: 0,
   ));
+
+  @include mat.button-overrides((
+    text-label-text-color: var(--mat-sys-on-surface),
+  ))
 }
 
 body {
@@ -44,3 +48,8 @@ body {
 }
 
 /* You can add global styles to this file, and also import other style files */
+
+span.space {
+  display: flex;
+  flex: auto 1 1;
+}

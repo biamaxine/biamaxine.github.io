@@ -1,6 +1,11 @@
 {
   "name": "biamaxine",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Bianca Maxine - Dev Fullstack & UX Designer",
+  "author": "Bianca Maxine",
+  "email": "biamaxine.v@gmail.com",
+  "github": "https://github.com/biamaxine",
+  "linkedin": "https://www.linkedin.com/in/biamaxine/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

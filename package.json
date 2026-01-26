@@ -1,8 +1,10 @@
 {
   "name": "biamaxine",
+  "subtitle": "dev fullstack & ux designer",
   "version": "1.0.0",
-  "description": "Bianca Maxine - Dev Fullstack & UX Designer",
-  "author": "Bianca Maxine",
+  "description":
+    "Especialista em NestJS e Angular, desenvolvo arquiteturas escaláveis e experiências centradas no usuário. Com foco em segurança e performance, crio ferramentas inteligentes de análise e transmissão de dados para órgãos governamentais, unindo infraestrutura moderna à eficiência operacional.",
+  "author": "bianca maxine",
   "email": "biamaxine.v@gmail.com",
   "github": "https://github.com/biamaxine",
   "linkedin": "https://www.linkedin.com/in/biamaxine/",

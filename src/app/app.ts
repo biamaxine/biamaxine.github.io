@@ -8,6 +8,7 @@ import { RouterOutlet } from '@angular/router';
 
 import {
   author,
+  subtitle,
   description,
   email,
   github,
@@ -17,6 +18,7 @@ import {
 } from '../../package.json';
 import { DisplayService } from './shared/services/display.service';
 import { ThemeService } from './shared/services/theme.service';
+import { IconService } from './shared/services/icon.service';
 
 @Component({
   selector: 'app-root',
@@ -94,6 +96,7 @@ import { ThemeService } from './shared/services/theme.service';
 })
 export class App {
   readonly title = signal(name);
+  readonly subtitle = signal(subtitle);
   readonly version = signal(version);
   readonly description = signal(description);
   readonly author = signal(author);
@@ -103,4 +106,9 @@ export class App {
 
   protected readonly display = inject(DisplayService);
   protected readonly theme = inject(ThemeService);
+  private readonly icons = inject(IconService);
+
+  constructor() {
+    this.icons.register();
+  }
 }

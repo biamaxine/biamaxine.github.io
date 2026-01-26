@@ -17,8 +17,17 @@ html {
   ));
 
   @include mat.button-overrides((
+    filled-container-color: var(--mat-sys-on-surface),
+    filled-label-text-color: var(--mat-sys-surface),
     text-label-text-color: var(--mat-sys-on-surface),
-  ))
+    text-state-layer-color: var(--mat-sys-on-surface),
+    text-focus-state-layer-opacity: .1,
+    text-hover-state-layer-opacity: .05,
+  ));
+
+  @include mat.icon-button-overrides((
+    icon-color: var(--mat-sys-on-surface),
+  ));
 }
 
 body {

@@ -6,19 +6,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
-import {
-  author,
-  subtitle,
-  description,
-  email,
-  github,
-  linkedin,
-  name,
-  version,
-} from '../../package.json';
+import { meta, version } from '../../db.json';
 import { DisplayService } from './shared/services/display.service';
-import { ThemeService } from './shared/services/theme.service';
 import { IconService } from './shared/services/icon.service';
+import { ThemeService } from './shared/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -96,14 +87,14 @@ import { IconService } from './shared/services/icon.service';
   styleUrl: './app.scss',
 })
 export class App {
-  readonly title = signal(name);
-  readonly subtitle = signal(subtitle);
+  readonly title = signal(meta.title);
+  readonly subtitle = signal(meta.subtitle);
   readonly version = signal(version);
-  readonly description = signal(description);
-  readonly author = signal(author);
-  readonly email = signal(email);
-  readonly github = signal(github);
-  readonly linkedin = signal(linkedin);
+  readonly description = signal(meta.description);
+  readonly author = signal(meta.author);
+  readonly email = signal(meta.email);
+  readonly github = signal(meta.github);
+  readonly linkedin = signal(meta.linkedin);
 
   protected readonly display = inject(DisplayService);
   protected readonly theme = inject(ThemeService);

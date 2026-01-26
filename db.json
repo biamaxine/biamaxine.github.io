@@ -1,0 +1,142 @@
+{
+  "skill-categories": [
+    {
+      "label": "backend",
+      "skills": {
+        "NestJS": {
+          "description": "Framework progressivo de Node.js para a criação de aplicações server-side eficientes, confiáveis e escaláveis.",
+          "level": "advanced",
+          "docs": "https://docs.nestjs.com/"
+        },
+        "Node.js": {
+          "description": "Ambiente de execução JavaScript assíncrono orientado a eventos, projetado para criar aplicativos de rede escaláveis.",
+          "level": "advanced",
+          "docs": "https://nodejs.org/pt-br/"
+        }
+      }
+    },
+    {
+      "label": "frontend",
+      "skills": {
+        "Angular": {
+          "description": "Plataforma de desenvolvimento para a criação de aplicações web mobile e desktop de alto desempenho.",
+          "level": "advanced",
+          "docs": "https://angular.io/"
+        },
+        "React": {
+          "description": "Biblioteca JavaScript para a construção de interfaces de usuário baseadas em componentes.",
+          "level": "intermediary",
+          "docs": "https://reactjs.org/"
+        }
+      }
+    },
+    {
+      "label": "languages",
+      "skills": {
+        "TypeScript": {
+          "description": "Superset de JavaScript que adiciona tipagem estática opcional à linguagem, ideal para projetos de grande escala.",
+          "level": "advanced",
+          "docs": "https://www.typescriptlang.org/docs/"
+        },
+        "Python": {
+          "description": "Linguagem de programação versátil, conhecida por sua legibilidade e vasta aplicação em ciência de dados e backend.",
+          "level": "intermediary",
+          "docs": "https://docs.python.org/3/"
+        },
+        "R": {
+          "description": "Linguagem e ambiente para computação estatística, análise de dados e representação gráfica.",
+          "level": "basic",
+          "docs": "https://www.r-project.org/other-docs.html"
+        }
+      }
+    },
+    {
+      "label": "databases",
+      "skills": {
+        "PostgreSQL": {
+          "description": "Sistema de banco de dados relacional de código aberto avançado, conhecido pela robustez e integridade de dados.",
+          "level": "advanced",
+          "docs": "https://www.postgresql.org/docs/"
+        },
+        "SQLite": {
+          "description": "Motor de banco de dados SQL embutido, leve e que dispensa configuração de servidor.",
+          "level": "advanced",
+          "docs": "https://www.sqlite.org/docs.html"
+        },
+        "MongoDB": {
+          "description": "Banco de dados orientado a documentos (NoSQL) de alto desempenho, escalabilidade e flexibilidade.",
+          "level": "intermediary",
+          "docs": "https://www.mongodb.com/docs/"
+        }
+      }
+    },
+    {
+      "label": "devops",
+      "skills": {
+        "GIT": {
+          "description": "Sistema de controle de versão distribuído, focado em velocidade e integridade de dados para gestão de código-fonte.",
+          "level": "advanced",
+          "docs": "https://git-scm.com/doc"
+        },
+        "Docker": {
+          "description": "Plataforma de software que permite a criação, teste e implantação de aplicações em ambientes isolados (containers).",
+          "level": "intermediary",
+          "docs": "https://docs.docker.com/"
+        }
+      }
+    }
+  ],
+
+  "libraries": [
+    {
+      "name": "Prisma",
+      "description": "ORM (Object-Relational Mapper) de última geração que facilita a interação com bancos de dados através de um esquema tipado e intuitivo.",
+      "docs": "https://www.prisma.io/docs"
+    },
+    {
+      "name": "TypeORM",
+      "description": "ORM que pode ser executado em várias plataformas e suporta as versões mais recentes do TypeScript e JavaScript para integração com SQL.",
+      "docs": "https://typeorm.io/"
+    },
+    {
+      "name": "Mongoose",
+      "description": "Biblioteca de modelagem de dados de objeto (ODM) para MongoDB e Node.js, fornecendo uma solução baseada em esquemas para modelar dados.",
+      "docs": "https://mongoosejs.com/docs/"
+    },
+    {
+      "name": "Swagger",
+      "description": "Conjunto de ferramentas para design, construção e documentação de APIs RESTful seguindo a especificação OpenAPI.",
+      "docs": "https://swagger.io/docs/"
+    },
+    {
+      "name": "JsonWebToken",
+      "description": "Implementação de JSON Web Tokens para garantir a transmissão segura de informações entre partes como um objeto JSON.",
+      "docs": "https://jwt.io/introduction/"
+    },
+    {
+      "name": "ESlint",
+      "description": "Ferramenta de análise estática que identifica problemas e impõe padrões de qualidade em códigos JavaScript e TypeScript.",
+      "docs": "https://eslint.org/docs/latest/"
+    },
+    {
+      "name": "Prettier",
+      "description": "Formatador de código opinativo que garante um estilo consistente em todo o projeto, removendo discussões sobre formatação manual.",
+      "docs": "https://prettier.io/docs/en/"
+    },
+    {
+      "name": "Pandas",
+      "description": "Poderosa biblioteca de manipulação e análise de dados de código aberto, fundamental para ciência de dados com Python.",
+      "docs": "https://pandas.pydata.org/docs/"
+    },
+    {
+      "name": "Angular Material",
+      "description": "Componentes de interface de usuário de alta qualidade que seguem os princípios do Material Design para aplicações Angular.",
+      "docs": "https://material.angular.io/"
+    },
+    {
+      "name": "PrimeNG",
+      "description": "Coleção abrangente de componentes de UI de código aberto e prontos para uso com diversos temas e layouts para Angular.",
+      "docs": "https://www.primefaces.org/primeng/"
+    }
+  ]
+}

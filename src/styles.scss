@@ -28,6 +28,12 @@ html {
   @include mat.icon-button-overrides((
     icon-color: var(--mat-sys-on-surface),
   ));
+
+  @include mat.tooltip-overrides((
+    container-shape: .5rem,
+    container-color: var(--mat-sys-on-surface),
+    supporting-text-color: var(--mat-sys-surface),
+  ));
 }
 
 body {

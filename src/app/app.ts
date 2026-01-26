@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 import {
   author,
@@ -25,6 +25,7 @@ import { IconService } from './shared/services/icon.service';
   imports: [
     RouterOutlet,
     CommonModule,
+    RouterModule,
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
@@ -32,11 +33,11 @@ import { IconService } from './shared/services/icon.service';
   ],
   template: `
     <ng-template #pageTitle>
-      <button matButton class="pageTitle">{{ title() }}</button>
+      <button matButton class="pageTitle" routerLink="/">{{ title() }}</button>
     </ng-template>
 
     <ng-template #menuOptions>
-      <button matButton>skills</button>
+      <button matButton routerLink="/skills">skills</button>
       <button matButton>projetos</button>
       <button matButton>contatos</button>
     </ng-template>
@@ -106,6 +107,7 @@ export class App {
 
   protected readonly display = inject(DisplayService);
   protected readonly theme = inject(ThemeService);
+  protected readonly router = inject(Router);
   private readonly icons = inject(IconService);
 
   constructor() {

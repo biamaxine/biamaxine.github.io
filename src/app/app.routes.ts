@@ -9,4 +9,10 @@ export const routes: Routes = [
     path: 'skills',
     loadComponent: () => import('./views/skills/skills').then(m => m.Skills),
   },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./views/projects/projects').then(m => m.Projects),
+    children: [],
+  },
 ];

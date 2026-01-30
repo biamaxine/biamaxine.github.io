@@ -28,8 +28,9 @@ import { ThemeService } from './shared/services/theme.service';
     </ng-template>
 
     <ng-template #menuOptions>
+      <button matButton routerLink="/">home</button>
       <button matButton routerLink="/skills">skills</button>
-      <button matButton>projetos</button>
+      <button matButton routerLink="/projects">projetos</button>
       <button matButton>contatos</button>
     </ng-template>
 

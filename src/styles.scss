@@ -31,8 +31,8 @@ html {
 
   @include mat.tooltip-overrides((
     container-shape: .5rem,
-    container-color: var(--mat-sys-on-surface),
-    supporting-text-color: var(--mat-sys-surface),
+    container-color: var(--mat-sys-surface-variant),
+    supporting-text-color: var(--mat-sys-on-surface-variant),
   ));
 }
 

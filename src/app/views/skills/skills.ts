@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import db from '../../../../db.json';
@@ -21,49 +22,60 @@ interface Library {
   name: string;
   description: string;
   docs: string;
+  stacks: string[];
 }
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, MatChipsModule, MatTooltipModule],
+  imports: [CommonModule, MatExpansionModule, MatChipsModule, MatTooltipModule],
   template: `
     <h1>skills</h1>
 
-    <ul class="skills-container">
+    <mat-accordion>
       @for (category of categories(); track category.label) {
-        <li class="skill-category {{ category.label }}">
-          <h3>{{ category.label }}</h3>
-          @for (
-            skill of category.skills | keyvalue: unsorted;
-            track skill.key
-          ) {
-            <mat-chip [matTooltip]="skill.value.description">
-              <a [href]="skill.value.docs" target="_blank">
-                <strong>{{ skill.key }}</strong> | {{ skill.value.level }}
-              </a>
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ category.label }}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="expansion-content">
+            @for (
+              skill of category.skills | keyvalue: unsorted;
+              track skill.key
+            ) {
+              <mat-chip [matTooltip]="skill.value.description">
+                <a [href]="skill.value.docs" target="_blank">
+                  <strong>{{ skill.key }}</strong> | {{ skill.value.level }}
+                </a>
+              </mat-chip>
+            }
+          </div>
+        </mat-expansion-panel>
+      }
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>libraries</mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="expansion-content">
+          @for (lib of libraries(); track lib) {
+            <mat-chip
+              matTooltip="{{ lib.description }} ({{ lib.stacks.join(', ') }})"
+            >
+              <a [href]="lib.docs" target="_blank">{{ lib.name }}</a>
             </mat-chip>
           }
-        </li>
-      }
-    </ul>
-
-    <div class="libraries-container">
-      <h2>libraries</h2>
-      <div class="libraries">
-        @for (lib of libraries(); track lib) {
-          <mat-chip [matTooltip]="lib.description">
-            <a [href]="lib.docs" target="_blank">{{ lib.name }}</a>
-          </mat-chip>
-        }
-      </div>
-    </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
   `,
 
   styleUrl: './skills.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Skills {
+  protected readonly libraries = signal<Library[]>(db.libraries as Library[]);
   protected readonly categories = signal<SkillCategory[]>(
     db['skill-categories'].filter(c =>
       ((value: unknown): value is SkillCategory => {
@@ -89,8 +101,6 @@ export class Skills {
       })(c),
     ),
   );
-
-  protected readonly libraries = signal<Library[]>(db.libraries as Library[]);
 
   protected unsorted = (): number => 0;
 }

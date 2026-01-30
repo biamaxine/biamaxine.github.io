@@ -11,9 +11,11 @@
     "linkedin": "https://www.linkedin.com/in/biamaxine/"
   },
 
-    "icons": {
+  "icons": {
     "github": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z\"/></svg>",
+
     "linkedin": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z\"/></svg>",
+
     "email": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z\"/></svg>"
   },
 
@@ -109,52 +111,72 @@
     {
       "name": "Prisma",
       "description": "ORM (Object-Relational Mapper) de última geração que facilita a interação com bancos de dados através de um esquema tipado e intuitivo.",
-      "docs": "https://www.prisma.io/docs"
+      "docs": "https://www.prisma.io/docs",
+      "stacks": ["NestJS", "Node.js", "TypeScript", "PostgreSQL", "SQLite"]
     },
     {
       "name": "TypeORM",
       "description": "ORM que pode ser executado em várias plataformas e suporta as versões mais recentes do TypeScript e JavaScript para integração com SQL.",
-      "docs": "https://typeorm.io/"
+      "docs": "https://typeorm.io/",
+      "stacks": ["NestJS", "Node.js", "TypeScript", "PostgreSQL", "SQLite"]
     },
     {
       "name": "Mongoose",
       "description": "Biblioteca de modelagem de dados de objeto (ODM) para MongoDB e Node.js, fornecendo uma solução baseada em esquemas para modelar dados.",
-      "docs": "https://mongoosejs.com/docs/"
+      "docs": "https://mongoosejs.com/docs/",
+      "stacks": ["NestJS", "Node.js", "TypeScript", "MongoDB"]
     },
     {
       "name": "Swagger",
       "description": "Conjunto de ferramentas para design, construção e documentação de APIs RESTful seguindo a especificação OpenAPI.",
-      "docs": "https://swagger.io/docs/"
+      "docs": "https://swagger.io/docs/",
+      "stacks": ["NestJS", "Node.js", "TypeScript"]
     },
     {
-      "name": "JsonWebToken",
+      "name": "JWT",
       "description": "Implementação de JSON Web Tokens para garantir a transmissão segura de informações entre partes como um objeto JSON.",
-      "docs": "https://jwt.io/introduction/"
+      "docs": "https://jwt.io/introduction/",
+      "stacks": ["NestJS", "Node.js", "TypeScript"]
     },
     {
       "name": "ESlint",
       "description": "Ferramenta de análise estática que identifica problemas e impõe padrões de qualidade em códigos JavaScript e TypeScript.",
-      "docs": "https://eslint.org/docs/latest/"
+      "docs": "https://eslint.org/docs/latest/",
+      "stacks": ["NestJS", "Angular", "Node.js", "TypeScript"]
     },
     {
       "name": "Prettier",
       "description": "Formatador de código opinativo que garante um estilo consistente em todo o projeto, removendo discussões sobre formatação manual.",
-      "docs": "https://prettier.io/docs/en/"
+      "docs": "https://prettier.io/docs/en/",
+      "stacks": ["NestJS", "Angular", "Node.js", "TypeScript"]
     },
     {
       "name": "Pandas",
       "description": "Poderosa biblioteca de manipulação e análise de dados de código aberto, fundamental para ciência de dados com Python.",
-      "docs": "https://pandas.pydata.org/docs/"
+      "docs": "https://pandas.pydata.org/docs/",
+      "stacks": ["Python", "SQLite"]
     },
     {
       "name": "Angular Material",
       "description": "Componentes de interface de usuário de alta qualidade que seguem os princípios do Material Design para aplicações Angular.",
-      "docs": "https://material.angular.io/"
+      "docs": "https://material.angular.io/",
+      "stacks": ["Angular"]
     },
     {
-      "name": "PrimeNG",
-      "description": "Coleção abrangente de componentes de UI de código aberto e prontos para uso com diversos temas e layouts para Angular.",
-      "docs": "https://www.primefaces.org/primeng/"
+      "name": "Nodemailer",
+      "description": "Módulo para aplicações Node.js que permite o envio de e-mails de forma simples e segura, com suporte a Unicode, anexos e diferentes métodos de transporte.",
+      "docs": "https://nodemailer.com/",
+      "stacks": ["NestJS", "Node.js", "TypeScript"]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "PROTEC - PCAM",
+      "subtitle": "Plataforma de Registro, Organização e Transferência de Evidências Criminais",
+      "description": "Plataforma governamental para a Polícia Civil do Amazonas que centraliza e automatiza o compartilhamento seguro de evidências criminais entre órgãos de segurança e justiça. Desenvolvida com arquitetura de APIs segregadas (Core e Media) para otimizar o processamento de grandes volumes de dados e garantir a integridade das informações.",
+      "path": "./public/projects/protec/protec.md",
+      "stacks": ["NestJS", "Angular", "PostgreSQL", "Docker", "Prisma", "Swagger", "JWT", "Nodemailer"]
     }
   ]
 }
